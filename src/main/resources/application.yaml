@@ -1,0 +1,32 @@
+spring:
+  file:
+    upload-dir: ./uploads/
+    base-url: http://localhost:8080
+  application:
+    name: demo
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+
+
+#  ai:
+#    openai:
+#      chat:
+#        options:
+#          model: deepseek-ai/DeepSeek-V3
+#          tool-calling:
+#            enabled: true
+#        completions-path: /v1/chat/completions
+#      api-key: you-key  #你的api-key，去硅基流动平台申请
+#      base-url: https://api.siliconflow.cn
+# 服务器配置
+server:
+  host: 0.0.0.0
+  port: 8080
+
+# JWT配置
+jwt:
+  header: Authorization  # token头部名称
+  token-prefix: "Bearer "  # token前缀
+

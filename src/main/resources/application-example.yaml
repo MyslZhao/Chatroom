@@ -1,0 +1,36 @@
+# ==========================================
+# 本地开发环境配置模板
+# 使用方法：
+# 1. 复制此文件并重命名为 application-*.yaml
+# 2. 修改下方带 TODO 的配置
+# ==========================================
+
+spring:
+  ai:
+    # 目前只支持 deepseek
+    deepseek:
+      # TODO: 修改为你的api key
+      api-key: your_key
+      base-url: https://api.deepseek.com
+
+      chat:
+        options:
+          # TODO: 改成你想要使用的模型
+          model: model_you_use
+
+  # 目前只支持 mysql 源
+  datasource:
+    # TODO: 修改为 mysql 数据源
+    url: jdbc:mysql://your_data_source/
+    # TODO: 修改为本地账号名
+    username: root
+    # TODO: 修改为你的账户密码
+    password: your_pass
+
+jwt:
+  # TODO: 修改为你的 jwt 密钥， 或使用环境变量
+  secret: your_secret / ${JWT_SECRET}
+  # TODO: 修改为你需要的有效期
+  expiration: 86400000
+  # TODO: 修改为你需要的刷新时长
+  refresh-expiration: 604800000
